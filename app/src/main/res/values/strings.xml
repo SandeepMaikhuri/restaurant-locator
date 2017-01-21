@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Restaraunt Locator</string>
+    <string name="title_activity_filter_pref">Filter Preferences</string>
+    <string name="info_loading">Loading, Please wait ...</string>
+    <string name="current_position">Current Position</string>
+    <string name="err_connectivity">Please check your internet connectivity.</string>
+    <string name="err_g_connection">Some error occured, Connection suspended.</string>
+    <string name="err_retry">Some error occured, Please try after some time.</string>
+    <string name="lbl_done">Done</string>
+    <string name="lbl_search">Search</string>
+    <string name="info_filter">Select from our filters to let you help in choosing the restaurant according to your taste and mood.</string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/label_feeling_hungry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Feeling Hungry!!"
+            android:layout_centerHorizontal="true"
+            android:textSize="47dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/label_locate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Locate a Restaraunt nearby you"
+            android:textSize="17dp"
+            android:layout_below="@+id/label_feeling_hungry"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_search"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
