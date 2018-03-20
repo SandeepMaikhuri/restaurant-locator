@@ -20,23 +20,21 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MapsActivity extends AbstractMapsActivity
-{
-    @Bind(R.id.ic_filter) ImageView iconFilter;
+public class MapsActivity extends AbstractMapsActivity {
+    @Bind(R.id.ic_filter)
+    ImageView iconFilter;
 
     private String foodId;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         ButterKnife.bind(this);
     }
 
     @Override
-    public void fetchingRestaurants()
-    {
+    public void fetchingRestaurants() {
         dialog = new ProgressDialog(this);
         dialog.setCancelable(false);
         dialog.setTitle(getResources().getString(R.string.info_loading));
@@ -46,14 +44,11 @@ public class MapsActivity extends AbstractMapsActivity
     }
 
     @Override
-    public void onFoodIdFetched(String idFood)
-    {
+    public void onFoodIdFetched(String idFood) {
         this.foodId = idFood;
-        runOnUiThread(new Runnable()
-        {
+        runOnUiThread(new Runnable() {
             @Override
-            public void run()
-            {
+            public void run() {
                 Log.e("getFoodIdObservable", foodId);
 
                 FetchRestaurantsPresentor fetchRestaurantsPresentor = new FetchRestaurantsPresentorImpl(foodId, latitude, longitude, MapsActivity.this);
@@ -63,14 +58,12 @@ public class MapsActivity extends AbstractMapsActivity
     }
 
     @Override
-    public void errorInFetchingFoodId()
-    {
+    public void errorInFetchingFoodId() {
         Toast.makeText(context, getResources().getString(R.string.err_retry), Toast.LENGTH_LONG).show();
     }
 
     @Override
-    public void onRestaurantsFetched(Response listRestaurants, ArrayList<String> categoriesList)
-    {
+    public void onRestaurantsFetched(Response listRestaurants, ArrayList<String> categoriesList) {
         setVenueMarkers(listRestaurants);
 
         dialog.dismiss();
@@ -79,8 +72,7 @@ public class MapsActivity extends AbstractMapsActivity
     }
 
     @Override
-    public void onRestaurantsFetched(GetVenuesResponse venuesResponse, ArrayList<String> categoriesList)
-    {
+    public void onRestaurantsFetched(GetVenuesResponse venuesResponse, ArrayList<String> categoriesList) {
         this.venuesResponse = venuesResponse;
 
         setVenueMarkers(venuesResponse);
@@ -92,21 +84,17 @@ public class MapsActivity extends AbstractMapsActivity
     }
 
     @Override
-    public void errorInFetchingRestaurants()
-    {
+    public void errorInFetchingRestaurants() {
         if (dialog != null && dialog.isShowing())
             dialog.dismiss();
 
         Toast.makeText(context, getResources().getString(R.string.err_retry), Toast.LENGTH_LONG).show();
     }
 
-    private void setClickListeners(final ArrayList<String> categoriesList)
-    {
-        findViewById(R.id.ic_filter).setOnClickListener(new View.OnClickListener()
-        {
+    private void setClickListeners(final ArrayList<String> categoriesList) {
+        findViewById(R.id.ic_filter).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 Intent intent = new Intent(getBaseContext(), FilterPreferencesActivity.class);
 
                 intent.putStringArrayListExtra(AppConstants.CATEGORIES_LIST, categoriesList);
