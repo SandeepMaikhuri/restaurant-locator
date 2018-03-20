@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.sandeepmaikhuri.apps.restaurantlocator.presentation.di.ApplicationComponent;
-import com.sandeepmaikhuri.apps.restaurantlocator.presentation.ui.AndroidApplication;
+import com.sandeepmaikhuri.apps.restaurantlocator.AndroidApplication;
 import com.sandeepmaikhuri.apps.restaurantlocator.utils.CustomTypeface;
 import com.sandeepmaikhuri.apps.restaurantlocator.utils.LayoutCustomization;
 

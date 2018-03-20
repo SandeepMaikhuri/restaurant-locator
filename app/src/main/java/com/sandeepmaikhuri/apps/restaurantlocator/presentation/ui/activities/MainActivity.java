@@ -2,14 +2,11 @@ package com.sandeepmaikhuri.apps.restaurantlocator.presentation.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.sandeepmaikhuri.apps.restarauntlocator.R;
-import com.sandeepmaikhuri.apps.restaurantlocator.presentation.ui.AndroidApplication;
-import com.sandeepmaikhuri.apps.restaurantlocator.utils.CustomTypeface;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

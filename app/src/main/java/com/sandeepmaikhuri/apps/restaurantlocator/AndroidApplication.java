@@ -1,4 +1,4 @@
-package com.sandeepmaikhuri.apps.restaurantlocator.presentation.ui;
+package com.sandeepmaikhuri.apps.restaurantlocator;
 
 import android.app.Application;
 import android.text.TextUtils;

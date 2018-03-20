@@ -10,9 +10,8 @@ import com.sandeepmaikhuri.apps.restaurantlocator.presentation.convertor.Respons
 import com.sandeepmaikhuri.apps.restaurantlocator.presentation.models.Response;
 import com.sandeepmaikhuri.apps.restaurantlocator.presentation.models.venues.GetVenuesResponse;
 import com.sandeepmaikhuri.apps.restaurantlocator.presentation.network.RequestFactory;
-import com.sandeepmaikhuri.apps.restaurantlocator.presentation.network.async.GetRestaurantsAsyncTask;
 import com.sandeepmaikhuri.apps.restaurantlocator.presentation.presentors.base.FetchRestaurantsPresentor;
-import com.sandeepmaikhuri.apps.restaurantlocator.presentation.ui.AndroidApplication;
+import com.sandeepmaikhuri.apps.restaurantlocator.AndroidApplication;
 import com.sandeepmaikhuri.apps.restaurantlocator.utils.AppConstants;
 
 import org.json.JSONObject;

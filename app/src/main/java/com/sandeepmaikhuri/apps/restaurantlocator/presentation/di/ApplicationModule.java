@@ -3,11 +3,10 @@ package com.sandeepmaikhuri.apps.restaurantlocator.presentation.di;
 import android.content.Context;
 import android.content.res.Resources;
 
-import com.sandeepmaikhuri.apps.restaurantlocator.presentation.ui.AndroidApplication;
+import com.sandeepmaikhuri.apps.restaurantlocator.AndroidApplication;
 import com.sandeepmaikhuri.apps.restaurantlocator.utils.CustomTypeface;
 import com.sandeepmaikhuri.apps.restaurantlocator.utils.LayoutCustomization;
 
-import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import dagger.Module;
