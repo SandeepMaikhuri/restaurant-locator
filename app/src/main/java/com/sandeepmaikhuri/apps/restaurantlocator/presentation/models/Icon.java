@@ -1,10 +1,16 @@
 
 package com.sandeepmaikhuri.apps.restaurantlocator.presentation.models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Icon {
 
+    @SerializedName("prefix")
+    @Expose
     private String prefix;
+    @SerializedName("suffix")
+    @Expose
     private String suffix;
 
     public String getPrefix() {
@@ -22,5 +28,4 @@ public class Icon {
     public void setSuffix(String suffix) {
         this.suffix = suffix;
     }
-
 }

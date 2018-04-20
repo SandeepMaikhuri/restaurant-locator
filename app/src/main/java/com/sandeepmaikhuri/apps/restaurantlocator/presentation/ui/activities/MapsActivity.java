@@ -1,18 +1,11 @@
 package com.sandeepmaikhuri.apps.restaurantlocator.presentation.ui.activities;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.sandeepmaikhuri.apps.restarauntlocator.R;
-import com.sandeepmaikhuri.apps.restaurantlocator.presentation.models.Response;
-import com.sandeepmaikhuri.apps.restaurantlocator.presentation.models.venues.GetVenuesResponse;
-import com.sandeepmaikhuri.apps.restaurantlocator.presentation.presentors.base.FetchRestaurantsPresentor;
-import com.sandeepmaikhuri.apps.restaurantlocator.presentation.presentors.impl.FetchRestaurantsPresentorImpl;
 import com.sandeepmaikhuri.apps.restaurantlocator.utils.AppConstants;
 
 import java.util.ArrayList;
@@ -20,7 +13,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MapsActivity extends AbstractMapsActivity {
+public class MapsActivity extends AbstractMapActivity {
     @Bind(R.id.ic_filter)
     ImageView iconFilter;
 
@@ -33,7 +26,7 @@ public class MapsActivity extends AbstractMapsActivity {
         ButterKnife.bind(this);
     }
 
-    @Override
+    /*@Override
     public void fetchingRestaurants() {
         dialog = new ProgressDialog(this);
         dialog.setCancelable(false);
@@ -63,7 +56,7 @@ public class MapsActivity extends AbstractMapsActivity {
     }
 
     @Override
-    public void onRestaurantsFetched(Response listRestaurants, ArrayList<String> categoriesList) {
+    public void vOnRestaurantsFetched(Response listRestaurants, ArrayList<String> categoriesList) {
         setVenueMarkers(listRestaurants);
 
         dialog.dismiss();
@@ -72,7 +65,7 @@ public class MapsActivity extends AbstractMapsActivity {
     }
 
     @Override
-    public void onRestaurantsFetched(GetVenuesResponse venuesResponse, ArrayList<String> categoriesList) {
+    public void vOnRestaurantsFetched(GetVenuesResponse venuesResponse, ArrayList<String> categoriesList) {
         this.venuesResponse = venuesResponse;
 
         setVenueMarkers(venuesResponse);
@@ -89,7 +82,7 @@ public class MapsActivity extends AbstractMapsActivity {
             dialog.dismiss();
 
         Toast.makeText(context, getResources().getString(R.string.err_retry), Toast.LENGTH_LONG).show();
-    }
+    }*/
 
     private void setClickListeners(final ArrayList<String> categoriesList) {
         findViewById(R.id.ic_filter).setOnClickListener(new View.OnClickListener() {

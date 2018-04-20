@@ -1,44 +1,43 @@
 
 package com.sandeepmaikhuri.apps.restaurantlocator.presentation.models;
 
-import java.io.Serializable;
 import java.util.List;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-public class HereNow implements Serializable
-{
+public class HereNow {
 
+    @SerializedName("count")
+    @Expose
     private int count;
+    @SerializedName("summary")
+    @Expose
     private String summary;
-    private List<Object> groups = null;
+    @SerializedName("groups")
+    @Expose
+    private List<Group> groups = null;
 
-    public int getCount()
-    {
+    public int getCount() {
         return count;
     }
 
-    public void setCount(int count)
-    {
+    public void setCount(int count) {
         this.count = count;
     }
 
-    public String getSummary()
-    {
+    public String getSummary() {
         return summary;
     }
 
-    public void setSummary(String summary)
-    {
+    public void setSummary(String summary) {
         this.summary = summary;
     }
 
-    public List<Object> getGroups()
-    {
+    public List<Group> getGroups() {
         return groups;
     }
 
-    public void setGroups(List<Object> groups)
-    {
+    public void setGroups(List<Group> groups) {
         this.groups = groups;
     }
-
 }

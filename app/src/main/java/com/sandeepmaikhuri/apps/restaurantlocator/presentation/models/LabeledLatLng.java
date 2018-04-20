@@ -1,12 +1,20 @@
 
 package com.sandeepmaikhuri.apps.restaurantlocator.presentation.models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class LabeledLatLng {
 
+    @SerializedName("label")
+    @Expose
     private String label;
-    private double lat;
-    private double lng;
+    @SerializedName("lat")
+    @Expose
+    private float lat;
+    @SerializedName("lng")
+    @Expose
+    private float lng;
 
     public String getLabel() {
         return label;
@@ -16,20 +24,19 @@ public class LabeledLatLng {
         this.label = label;
     }
 
-    public double getLat() {
+    public float getLat() {
         return lat;
     }
 
-    public void setLat(double lat) {
+    public void setLat(float lat) {
         this.lat = lat;
     }
 
-    public double getLng() {
+    public float getLng() {
         return lng;
     }
 
-    public void setLng(double lng) {
+    public void setLng(float lng) {
         this.lng = lng;
     }
-
 }
