@@ -1,4 +1,4 @@
-package com.sandeepmaikhuri.apps.restaurantlocator.rest;
+package com.sandeepmaikhuri.apps.restaurantlocator.network;
 
 import com.sandeepmaikhuri.apps.restaurantlocator.presentation.models.ApiResponse;
 
@@ -13,7 +13,7 @@ import retrofit2.http.QueryMap;
  * Created by sandeep on 22/3/18.
  */
 
-public interface ApiService {
+interface ApiService {
 
     @GET("search")
     Call<ApiResponse> fetchCatagoryId(@QueryMap Map<String, String> data);
