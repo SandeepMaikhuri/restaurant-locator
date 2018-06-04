@@ -1,19 +1,27 @@
 
 package com.sandeepmaikhuri.apps.restaurantlocator.presentation.models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Stats {
 
-    private int checkinsCount;
-    private int usersCount;
+    @SerializedName("tipCount")
+    @Expose
     private int tipCount;
+    @SerializedName("usersCount")
+    @Expose
+    private int usersCount;
+    @SerializedName("checkinsCount")
+    @Expose
+    private int checkinsCount;
 
-    public int getCheckinsCount() {
-        return checkinsCount;
+    public int getTipCount() {
+        return tipCount;
     }
 
-    public void setCheckinsCount(int checkinsCount) {
-        this.checkinsCount = checkinsCount;
+    public void setTipCount(int tipCount) {
+        this.tipCount = tipCount;
     }
 
     public int getUsersCount() {
@@ -24,12 +32,11 @@ public class Stats {
         this.usersCount = usersCount;
     }
 
-    public int getTipCount() {
-        return tipCount;
+    public int getCheckinsCount() {
+        return checkinsCount;
     }
 
-    public void setTipCount(int tipCount) {
-        this.tipCount = tipCount;
+    public void setCheckinsCount(int checkinsCount) {
+        this.checkinsCount = checkinsCount;
     }
-
 }
